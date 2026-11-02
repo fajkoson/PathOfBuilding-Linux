@@ -1,4 +1,4 @@
-Skills in Path of Building are generated from what is called a template file.  These template files are used when exporting data from the ggpk and can be found [here](../src/Export/Skills).  While this tutorial will focus on the [combined data files](../src/Data/Skills) know that any changes will be overwritten unless added to the template files.  The script that combines these template files with the game data can be found [here](../src/Export/Scripts/skills.lua)
+Skills in Path of Building are generated from what is called a template file.  These template files are used when exporting data from the ggpk and can be found [here](../source/lua/Export/Skills).  While this tutorial will focus on the [combined data files](../source/lua/Data/Skills) know that any changes will be overwritten unless added to the template files.  The script that combines these template files with the game data can be found [here](../source/lua/Export/Scripts/skills.lua)
 
 ## Template files
 
@@ -62,7 +62,7 @@ Notice how these stat numbers don't really align with damage numbers in any mean
 * 3 means apply an effectiveness interpolation.  Take this formula for current effectiveness and multiply by the first two values in the gem level's row: `(3.885209 + 0.360246 * (actorLevel - 1)) * (grantedEffect.baseEffectiveness or 1) * (1 + (grantedEffect.incrementalEffectiveness or 0)) ^ (actorLevel - 1)`
   - For example, a level 20 Fireball (as of this writing) deals 1095 to 1643 damage.  To get those numbers we'd apply the formula like so: `(3.885209 + 0.360246 * (70 - 1)) * (2.9384000301361 or 1) * (1 + (0.041200000792742 or 0)) ^ (70 - 1)` ends up being 1369.26, and multiplied by the lower value for the level 20 row (0.80000001192093) you get 1095 minimum damage.  Do the same thing for the higher value in that same row (1.2000000476837) and you get 1643 maximum damage.
 
-The code for this can be found in `CalcTools.lua` starting [here](../src/Modules/CalcTools.lua#L166)
+The code for this can be found in `CalcTools.lua` starting [here](../source/lua/Modules/CalcTools.lua#L166)
 
 ## Skill Parts
 
@@ -80,7 +80,7 @@ Some skills rely on knowing something more about the character before they can c
 
 1. Add `#skill grantedEffectId` to the appropriate template file for the skill
 2. Add `#mods` below that
-3. [Export the skills](../CONTRIBUTING.md#exporting-ggpk-data-from-path-of-exile) to combine it with the game data
+3. [Export the skills](../source/lua/Export/ggpk/README.md) to combine it with the game data
 4. If there are stats in the `stats` table that aren't recognized already in `SkillStatMap.lua`, add a `statMap` table to the template file to map them properly to a mod.
 5. Add other directives/options if needed
 

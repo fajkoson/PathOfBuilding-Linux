@@ -1,0 +1,11 @@
+diff --git a/Makefile b/Makefile
+--- a/Makefile
++++ b/Makefile
+@@ -144,5 +144,7 @@ install: $(INSTALL_DEP)
+ 	  $(RM) $(FILE_PC).tmp
+ 	cd src && $(INSTALL_F) $(FILES_INC) $(INSTALL_INC)
+ 	cd src/jit && $(INSTALL_F) $(FILES_JITLIB) $(INSTALL_JITLIB)
++ifneq ($(INSTALL_TNAME),$(INSTALL_TSYMNAME))
+ 	$(SYMLINK) $(INSTALL_TNAME) $(INSTALL_TSYM)
++endif
+ 	@echo "==== Successfully installed LuaJIT $(VERSION) to $(PREFIX) ===="

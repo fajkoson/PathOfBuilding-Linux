@@ -1,0 +1,42 @@
+--- a/cmp_core/shaders/bcn_common_api.h
++++ b/cmp_core/shaders/bcn_common_api.h
+@@ -294,7 +294,7 @@
+ #ifdef ASPM_HLSL
+     return (v1);
+ #else
+-    return (v1.x, v1.y, v1.z, v1.w);
++    return CGU_Vec4i(v1.x, v1.y, v1.z, v1.w);
+ #endif
+ }
+ 
+@@ -303,7 +303,7 @@
+ #ifdef ASPM_HLSL
+     return (v1);
+ #else
+-    return (v1.x, v1.y, v1.z);
++    return CGU_Vec3i(v1.x, v1.y, v1.z);
+ #endif
+ }
+ 
+@@ -1001,7 +1001,7 @@
+ 
+     CGU_FLOAT det = alphaSqSum * betaSqSum - alphaBetaSum * alphaBetaSum;
+ 
+-    if (abs(det) > 0.00001f)
++    if (cmp_fabs(det) > 0.00001f)
+     {
+         CGU_FLOAT detRcp = cmp_rcp(det);
+         blockMin         = cmp_clampVec3f((alphaTexelSum * betaSqSum - betaTexelSum * alphaBetaSum) * detRcp, 0.0f, CMP_MAX_16BITFLOAT);
+@@ -1019,9 +1019,9 @@
+     return abs(value);
+ #else
+     CGU_Vec3f res;
+-    res.x = abs(value.x);
+-    res.y = abs(value.y);
+-    res.z = abs(value.z);
++    res.x = cmp_fabs(value.x);
++    res.y = cmp_fabs(value.y);
++    res.z = cmp_fabs(value.z);
+     return res;
+ #endif
+ }

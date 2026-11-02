@@ -1,0 +1,36 @@
+{
+  "imgui": {
+    "repository": "https://github.com/ocornut/imgui.git",
+    "revision": "f1cc2ae15e53a861a874c3034aae6798fde194ab",
+    "url": "https://codeload.github.com/ocornut/imgui/tar.gz/f1cc2ae15e53a861a874c3034aae6798fde194ab",
+    "sha256": "f30be7f3e2136615b1848a9afb72f6dfd8a60820ddf1c1a85997bf3b722e7cfc"
+  },
+  "compressonator": {
+    "repository": "https://github.com/GPUOpen-Tools/compressonator.git",
+    "revision": "f4b53d79ec5abbb50924f58aebb7bf2793200b94",
+    "url": "https://codeload.github.com/GPUOpen-Tools/compressonator/tar.gz/f4b53d79ec5abbb50924f58aebb7bf2793200b94",
+    "sha256": "8034fbb31ffebc2b1c295f41e365f51acb62d1ddf1c47bc4637b2d55d043d5a1"
+  },
+  "lcurl": {
+    "repository": "https://github.com/Lua-cURL/Lua-cURLv3.git",
+    "revision": "9f8b6dba8b5ef1b26309a571ae75cda4034279e5",
+    "url": "https://codeload.github.com/Lua-cURL/Lua-cURLv3/tar.gz/9f8b6dba8b5ef1b26309a571ae75cda4034279e5",
+    "sha256": "784d585c03db13074d23ffc8fb698995fe5d9326f6f169ee009c559f2ad52b88"
+  },
+  "luautf8": {
+    "repository": "https://github.com/starwing/luautf8.git",
+    "revision": "d65ebfa4a00d6e582970ab729013bb2a629e74c9",
+    "url": "https://codeload.github.com/starwing/luautf8/tar.gz/d65ebfa4a00d6e582970ab729013bb2a629e74c9",
+    "sha256": "ce34bfb032a57448f77386ed43d082c3a215aad1b19f6bf4c1583f6a2fe856c3"
+  },
+  "luasocket": {
+    "repository": "https://github.com/lunarmodules/luasocket.git",
+    "revision": "66cdeca6636a017fe8ed2b0ee431798f8fb4ade3",
+    "url": "https://codeload.github.com/lunarmodules/luasocket/tar.gz/66cdeca6636a017fe8ed2b0ee431798f8fb4ade3",
+    "sha256": "8474aada1e637b52383e2c246677f4f9b53a7c5284aadaa48952c81e94986962"
+  },
+  "vcpkg": {
+    "repository": "https://github.com/microsoft/vcpkg.git",
+    "revision": "04a9d8e5212d01ee1dd9478eadd9caade4f8b0d4"
+  }
+}

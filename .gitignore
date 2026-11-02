@@ -13,35 +13,41 @@ Builds/
 *.cfg
 Settings.xml
 
+# Python bytecode
+__pycache__/
+*.py[cod]
+
 # Testing
-luajit/
-spec/test_results.log
-spec/test_generation.log
-src/luacov.stats.out
-runtime/lua/debugger.lua
+/luajit/
+out/logs/test_results.log
+out/logs/test_generation.log
+source/lua/luacov.stats.out
+source/resources/lua/debugger.lua
 
 # Release
 manifest-updated.xml
 
 # GGPK Export
-src/Export/ggpk/metadata/
-src/Export/ggpk/data/
-src/Export/ggpk/art/
-src/Export/ggpk/*.exe
-src/Export/ggpk/*.dll
+source/lua/Export/ggpk/metadata/
+source/lua/Export/ggpk/data/
+source/lua/Export/ggpk/art/
+source/lua/Export/ggpk/*.exe
+source/lua/Export/ggpk/*.dll
 
 # PoB Trader
 *_currency_values.json
 
 # Timeless Jewels
-src/Data/TimelessJewelData/*.bin
+source/lua/Data/TimelessJewelData/*.bin
 
-# Simplegraphic Debugging
-runtime/imgui.ini
-runtime/SimpleGraphic/SimpleGraphic.log
-
-src/poe_api_response.json
-runtime/SimpleGraphic/Screenshots
+source/lua/poe_api_response.json
 
 .emmyrc.json
 .luarc.json
+
+# Linux build and local agent configuration
+/build/
+/out/
+/AGENTS.md
+/.agents/
+/CMakeUserPresets.json

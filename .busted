@@ -4,16 +4,16 @@ return {
         verbose = true,
     },
     default = {
-        directory = "src",
-        lpath = "../runtime/lua/?.lua;../runtime/lua/?/init.lua",
+        directory = "source/lua",
+        lpath = "../resources/lua/?.lua;../resources/lua/?/init.lua",
         helper = "HeadlessWrapper.lua",
-        ROOT = { "../spec" },
+        ROOT = { "../../tests/lua" },
        	["exclude-tags"] = "builds",
     },
     generate = {
-        directory = "src",
-        lpath = "../runtime/lua/?.lua;../runtime/lua/?/init.lua",
+        directory = "source/lua",
+        lpath = "../resources/lua/?.lua;../resources/lua/?/init.lua",
         helper = "HeadlessWrapper.lua",
-        ROOT = { "../spec/GenerateBuilds.lua" },
+        ROOT = { "../../tests/lua/GenerateBuilds.lua" },
     }
 }

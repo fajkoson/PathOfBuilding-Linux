@@ -3,7 +3,7 @@ import pathlib
 import shutil
 import tempfile
 
-import fix_ascendancy_positions
+from tools.scripts import fix_ascendancy_positions
 
 
 def test_fix_one() -> None:

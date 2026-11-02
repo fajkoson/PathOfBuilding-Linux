@@ -1,0 +1,4 @@
+Repository: https://github.com/PathOfBuildingCommunity/PathOfBuilding-SimpleGraphic.git
+Revision: 8694a07b7eed57a0224e113da8cea0f522fee6b9
+Import: git subtree add --prefix=source/native/simplegraphic <repository> <revision> --squash
+Upstream dependency gitlinks are replaced by cmake/sources.lock.json and build-time fetching.
