@@ -190,8 +190,21 @@ intentionally kept visible; successful compilation does not validate those featu
 - docs/: project documentation and upstream Markdown changelog.
 - tests/: Lua regression tests, maintenance tests and container setup.
 
-Application updates are merged from upstream/dev into linux-support. Runtime
-updates use git subtree pull --prefix=source/native/simplegraphic with the runtime's
+The local `upstream-dev` branch tracks `upstream/dev` in the original community
+repository. The `linux` branch contains the permanent Linux fork. Refresh the
+upstream branch, then merge it into the Linux branch from a clean working tree:
+
+```sh
+git fetch upstream
+git switch upstream-dev
+git merge --ff-only upstream/dev
+git switch linux
+git merge upstream-dev
+```
+
+Keep upstream read-only and push fork changes only to `origin`.
+
+Runtime updates use git subtree pull --prefix=source/native/simplegraphic with the runtime's
 repository URL and --squash. Follow the path mappings in [the source layout](rundown.md) when upstream
 restores root resources or the old spec/runtime directories.
 Update the provenance record and translate upstream dependency revisions into
